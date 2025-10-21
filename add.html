@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lägg till - Fetch API demo</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="./index.html" class="nav__link">Lista</a>
+        <a href="./add.html" class="nav__link nav__link--active">Lägg till</a>
+        <a href="./about.html" class="nav__link">Om</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Lägg till ny post</h1>
+
+      <form id="addForm" class="card form">
+        <label class="form__field">
+          <span>Företagsnamn</span>
+          <input
+            id="companyname"
+            name="companyname"
+            type="text"
+            required
+            placeholder="Ange företagsnamn"
+          />
+        </label>
+        <label class="form__field">
+          <span>Jobbtitel</span>
+          <input
+            id="jobtitle"
+            name="jobtitle"
+            type="text"
+            required
+            placeholder="Ange jobbtitel"
+          />
+        </label>
+        <label class="form__field">
+          <span>Plats</span>
+          <input
+            id="location"
+            name="location"
+            type="text"
+            required
+            placeholder="Ange plats"
+          />
+        </label>
+        <label class="form__field">
+          <span>Startdatum</span>
+          <input id="startdate" name="startdate" type="date" required />
+        </label>
+        <label class="form__field">
+          <span>Slutdatum (lämna tomt om pågående)</span>
+          <input id="enddate" name="enddate" type="date" />
+        </label>
+        <label class="form__field">
+          <span>Beskrivning</span>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+            placeholder="Beskrivning av arbetet"
+          ></textarea>
+        </label>
+        <div class="form__actions">
+          <button type="submit" class="button">Spara</button>
+          <a class="button button--secondary" href="./index.html">Tillbaka</a>
+        </div>
+        <output id="formStatus" class="muted" role="status"></output>
+      </form>
+    </main>
+
+    <footer class="site-footer muted">
+      <small>Frontend med Fetch API. Byggd med HTML/CSS/JS.</small>
+    </footer>
+
+    <script src="./assets/js/config.js" defer></script>
+    <script src="./assets/js/api.js" defer></script>
+    <script src="./assets/js/add.js" defer></script>
+  </body>
+</html>

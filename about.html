@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Om - Fetch API demo</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="./index.html" class="nav__link">Lista</a>
+        <a href="./add.html" class="nav__link">Lägg till</a>
+        <a href="./about.html" class="nav__link nav__link--active">Om</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Om webbplatsen</h1>
+      <section class="card">
+        <p>
+          Denna webbplats är en fristående frontend som använder Fetch API för
+          att kommunicera med min webbtjänst från Uppgift 2.1 (moment 2_1).
+          Lösningen är byggd med ren HTML, CSS och JavaScript (utan ramverk) och
+          visar ett komplett flöde: lista befintliga poster, lägga till en ny
+          post och radera en post via ett publikt REST-API.
+        </p>
+        <ul>
+          <li>
+            <strong>Syfte:</strong> Bygga en oberoende frontend som konsumerar
+            ett externt API (REST) och visar grundläggande CRUD-flöden
+            (Create/Read/Delete) med tydlig felhantering.
+          </li>
+          <li>
+            <strong>Struktur:</strong> Tre sidor – startsida med lista över
+            poster, en "lägg till"-sida med formulär och denna sida som
+            beskriver syfte, teknik och databas.
+          </li>
+          <li>
+            <strong>Teknik:</strong> HTML, CSS (responsiv med rem) och
+            JavaScript.
+          </li>
+          <li>
+            <strong>Webbtjänst (API):</strong>
+            <a
+              href="https://dt207g-moment2-1-ph2b.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >dt207g-moment2-1-ph2b.onrender.com</a
+            >
+          </li>
+          <li><strong>API-endpoint:</strong> <code>/api/users</code></li>
+          <li>
+            <strong>Databas-server:</strong> <span id="dbInfo">PostgreSQL</span>
+            (via webbtjänsten). Backend exponerar REST-endpoints för användare
+            och hanterar datalagring, validering och statuskoder.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Slutsatser</h2>
+        <p id="conclusions">
+          Arbetet har tydliggjort flera viktiga aspekter av webbutveckling:
+        </p>
+        <ul>
+          <li>
+            <strong>CORS:</strong> När frontend och backend ligger på olika
+            domäner/portar krävs att servern tillåter kors-origin-förfrågningar
+            (CORS). I backend löses detta med <code>cors</code>-middleware.
+          </li>
+          <li>
+            <strong>HTTP-statuskoder och fel:</strong> Jag har byggt in
+            felhantering i klienten (t.ex. visar statusmeddelanden vid
+            201/400/404/500) för att ge användaren förståelig feedback.
+          </li>
+          <li>
+            <strong>Fetch och JSON:</strong> Att sätta rätt headers (<code
+              >Content-Type: application/json</code
+            >), serialisera JSON vid POST/PUT och hantera svar beroende på
+            innehållstyp är centralt för robusta anrop.
+          </li>
+          <li>
+            <strong>Modulär kod:</strong> Jag separerar API-anrop, listvy och
+            formulärlogik i egna filer för bättre läsbarhet och underhåll.
+          </li>
+          <li>
+            <strong>Tillgänglighet och responsivitet:</strong> Jag använder
+            semantiska element, tydliga statusmeddelanden och rem-baserade mått
+            för att förbättra läsbarhet och responsiv design.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer muted">
+      <small>Frontend med Fetch API. Byggd med HTML/CSS/JS.</small>
+    </footer>
+
+    <script src="./assets/js/config.js" defer></script>
+  </body>
+</html>
