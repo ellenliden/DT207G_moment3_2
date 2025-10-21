@@ -58,7 +58,7 @@ Frontend-formuläret skickar följande fält till `POST /api/experiences`:
 ## Publicering
 
 - Backend (moment 3 steg 1): https://dt207g-moment3-rf1t.onrender.com
-- Frontend (moment 3 steg 2): https://dt207g-moment3-2.onrender.com
+- Frontend (moment 3 steg 2): https://moment3steg2.netlify.app/
 
 ## Slutsatser
 
