@@ -20,10 +20,18 @@
       <section class="card">
         <p>
           Denna webbplats är en fristående frontend som använder Fetch API för
-          att kommunicera med min webbtjänst från Uppgift 2.1 (moment 2_1).
+          att kommunicera med min webbtjänst från Moment 3 Steg 1 (moment3_2).
           Lösningen är byggd med ren HTML, CSS och JavaScript (utan ramverk) och
-          visar ett komplett flöde: lista befintliga poster, lägga till en ny
-          post och radera en post via ett publikt REST-API.
+          visar ett komplett flöde: lista befintliga arbetserfarenheter, lägga
+          till en ny arbetserfarenhet och radera en arbetserfarenhet via ett
+          publikt REST-API.
+        </p>
+        <p>
+          <strong>Utvecklingsprocess:</strong> Jag använde grundstrukturen från
+          moment 2.2 som bas och anpassade den för moment3_2 backend.
+          Huvudsakliga ändringar var uppdatering av API-konfiguration,
+          anpassning av formulärfält för MongoDB-schema och modifiering av
+          JavaScript för att hantera arbetserfarenheter istället för användare.
         </p>
         <ul>
           <li>
@@ -33,8 +41,8 @@
           </li>
           <li>
             <strong>Struktur:</strong> Tre sidor – startsida med lista över
-            poster, en "lägg till"-sida med formulär och denna sida som
-            beskriver syfte, teknik och databas.
+            arbetserfarenheter, en "lägg till"-sida med formulär och denna sida
+            som beskriver syfte, teknik och databas.
           </li>
           <li>
             <strong>Teknik:</strong> HTML, CSS (responsiv med rem) och
@@ -43,17 +51,18 @@
           <li>
             <strong>Webbtjänst (API):</strong>
             <a
-              href="https://dt207g-moment2-1-ph2b.onrender.com"
+              href="https://dt207g-moment3-rf1t.onrender.com"
               target="_blank"
               rel="noopener noreferrer"
-              >dt207g-moment2-1-ph2b.onrender.com</a
+              >dt207g-moment3-rf1t.onrender.com</a
             >
           </li>
-          <li><strong>API-endpoint:</strong> <code>/api/users</code></li>
+          <li><strong>API-endpoint:</strong> <code>/api/experiences</code></li>
           <li>
-            <strong>Databas-server:</strong> <span id="dbInfo">PostgreSQL</span>
-            (via webbtjänsten). Backend exponerar REST-endpoints för användare
-            och hanterar datalagring, validering och statuskoder.
+            <strong>Databas-server:</strong> <span id="dbInfo">MongoDB</span>
+            (via webbtjänsten). Backend exponerar REST-endpoints för
+            arbetserfarenheter och hanterar datalagring, validering och
+            statuskoder.
           </li>
         </ul>
       </section>
@@ -79,6 +88,15 @@
               >Content-Type: application/json</code
             >), serialisera JSON vid POST/PUT och hantera svar beroende på
             innehållstyp är centralt för robusta anrop.
+          </li>
+          <li>
+            <strong>MongoDB ObjectId:</strong> Backend använder MongoDB med
+            ObjectId för unika identifierare, vilket kräver specifik validering
+            i API:et.
+          </li>
+          <li>
+            <strong>Datumvalidering:</strong> ISO8601-format för datum
+            säkerställer korrekt dataöverföring mellan frontend och backend.
           </li>
           <li>
             <strong>Modulär kod:</strong> Jag separerar API-anrop, listvy och
