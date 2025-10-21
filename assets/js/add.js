@@ -25,14 +25,14 @@
   form.addEventListener("submit", async (e) => {
     e.preventDefault(); //detta förhindrar standardformulärskickning så att ja kan hantera skickningen själva
 
-    // Hämta formulärdata (anpassat för din backend)
+    // Hämta formulärdata (anpassat för moment3_2 backend)
     const formData = new FormData(form);
     const payload = {
-      companyname: formData.get("companyname"),
-      jobtitle: formData.get("jobtitle"),
-      location: formData.get("location"),
-      startdate: formData.get("startdate"),
-      enddate: formData.get("enddate") || null,
+      company: formData.get("company"),
+      title: formData.get("title"),
+      location: formData.get("location") || undefined,
+      startDate: formData.get("startDate"),
+      endDate: formData.get("endDate") || undefined,
       description: formData.get("description"),
     };
 

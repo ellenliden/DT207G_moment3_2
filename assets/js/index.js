@@ -42,10 +42,9 @@
         item.id || item._id || item.uuid || item.courseId || item.slug || "";
 
       // sätt företag, jobbtitel och id
-      const jobTitle = item.jobtitle ? ` - ${item.jobtitle}` : "";
+      const jobTitle = item.title ? ` - ${item.title}` : "";
       title.textContent =
-        (item.companyname || item.title || item.name || `Post ${id}`) +
-        jobTitle;
+        (item.company || item.title || item.name || `Post ${id}`) + jobTitle;
       meta.textContent = id ? `id: ${id}` : "";
 
       // Lägg till raderingsfunktion så att användaren kan radera en post

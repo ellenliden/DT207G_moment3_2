@@ -20,20 +20,20 @@
 
       <form id="addForm" class="card form">
         <label class="form__field">
-          <span>Företagsnamn</span>
+          <span>Företag</span>
           <input
-            id="companyname"
-            name="companyname"
+            id="company"
+            name="company"
             type="text"
             required
             placeholder="Ange företagsnamn"
           />
         </label>
         <label class="form__field">
-          <span>Jobbtitel</span>
+          <span>Titel</span>
           <input
-            id="jobtitle"
-            name="jobtitle"
+            id="title"
+            name="title"
             type="text"
             required
             placeholder="Ange jobbtitel"
@@ -45,17 +45,16 @@
             id="location"
             name="location"
             type="text"
-            required
-            placeholder="Ange plats"
+            placeholder="Ange plats (valfritt)"
           />
         </label>
         <label class="form__field">
           <span>Startdatum</span>
-          <input id="startdate" name="startdate" type="date" required />
+          <input id="startDate" name="startDate" type="date" required />
         </label>
         <label class="form__field">
           <span>Slutdatum (lämna tomt om pågående)</span>
-          <input id="enddate" name="enddate" type="date" />
+          <input id="endDate" name="endDate" type="date" />
         </label>
         <label class="form__field">
           <span>Beskrivning</span>
@@ -64,7 +63,8 @@
             name="description"
             rows="4"
             required
-            placeholder="Beskrivning av arbetet"
+            maxlength="2000"
+            placeholder="Beskrivning av arbetet (max 2000 tecken)"
           ></textarea>
         </label>
         <div class="form__actions">
